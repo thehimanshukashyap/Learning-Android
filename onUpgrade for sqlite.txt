@@ -1,0 +1,6 @@
+@Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        String drop = String.valueOf("DROP TABLE IF EXISTS");
+        sqLiteDatabase.execSQL(drop, new String[] {"myemployee"});
+        onCreate(sqLiteDatabase);
+    }
